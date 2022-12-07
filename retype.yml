@@ -1,0 +1,68 @@
+input: .
+output: .retype
+url: https://docs.leechprotocol.com
+favicon: static/favicon.ico
+meta:
+  title: " | Leechprotocol.com - Automated cross-chain yield aggregator"
+branding:
+  logo: static/logo.svg
+  logoDark: static/logo-dark.svg
+  logoAlign: left
+links:
+    - text: Medium
+      link: https://medium.com/@LeechProtocol
+      icon: static/medium.png
+      iconAlign: left
+      target: blank
+    - text: Telegram
+      link: https://t.me/LeechProtocolOfficial
+      icon: static/telegram.png
+      iconAlign: left
+      target: blank
+    - text: Discord
+      link: https://discord.gg/FGVmZycXsd
+      icon: static/discord.png
+      iconAlign: left
+      target: blank
+    - text: Twitter
+      link: https://twitter.com/LeechProtocol
+      icon: static/twitter.png
+      iconAlign: left
+      target: blank
+    - text: Github
+      link: https://github.com/Leech-Protocol
+      icon: mark-github
+      iconAlign: left
+      target: blank
+footer:
+  copyright: "&copy; Copyright [LeechProtocol L.L.C-FZ](https://www.leechprotocol.com) {{ year }}. All rights reserved."
+  links:
+    - text: Medium
+      link: https://medium.com/@LeechProtocol
+      icon: static/medium.png
+      iconAlign: left
+      target: blank
+    - text: Telegram
+      link: https://t.me/LeechProtocolOfficial
+      icon: static/telegram.png
+      iconAlign: left
+      target: blank
+    - text: Discord
+      link: https://discord.gg/FGVmZycXsd
+      icon: static/discord.png
+      iconAlign: left
+      target: blank
+    - text: Twitter
+      link: https://twitter.com/LeechProtocol
+      icon: static/twitter.png
+      iconAlign: left
+      target: blank
+    - text: Github
+      link: https://github.com/Leech-Protocol
+      icon: mark-github
+      iconAlign: left
+      target: blank
+editor:
+  enabled: false
+markdown:
+  lineBreaks: soft
