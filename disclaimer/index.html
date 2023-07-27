@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.743757605582">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.743785024108">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -34,11 +34,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../static/favicon.ico" rel="icon">
-    <link href="../resources/css/retype.css?v=3.1.0.743757605582" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.1.0.743785024108" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.743757605582" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.743785024108" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.743757605582" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.743785024108" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -314,8 +314,17 @@ including any direct, indirect, incidental, special, exemplary, punitive or cons
 </doc-anchor-target>
 <p>Impermanent loss (or Divergence Loss) is associated with providing assets to a liquidity pool. Liquidity pools are used on decentralized exchanges, such as Uniswap or Curve, to create money markets and allow traders to buy and sell pool-supported assets. If you contribute liquidity funds to an automated market maker, you may lose some or all of the amount you invested if the relative value of assets in the automated market maker changes. If even one of the assets in the pool depreciates or becomes worthless, your entire position in the pool, regardless of the assets you originally provided when you entered the pool, may lose value or become worthless.If you provide liquidity to the pool and one of the assets increases in value relative to others in the pool, you may not make as much money as you could have if you had held those assets instead of placing them in the pool. It is critical to understand the mathematics of impermanent losses before providing liquidity. Many yield farming strategies, including the yield farming strategies used by Leech, provide incentives to provide liquidity in AMMs. These incentives do not guarantee that providing liquidity will be profitable for you.</p>
 <doc-anchor-target id="section-7">
-    <h5>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#section-7">#</doc-anchor-trigger>
+        <span><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
+            <span>Mixed pools Mechanics</span>
+        </span></span>
+    </h3>
+</doc-anchor-target>
+<p>All our mixed pools will consist of several pairs. For instance, we might add five medium-risk pairs to a high-risk pool. We implement this to enable liquidity reallocation among pairs on platforms like Velodrome in search of the most profitable conditions. At the moment, we have added one token pair to each mixed pool. Mixed pool (medium risk) is a liquidity mining strategy on the Optimism network, utilizing Velodrome DEX. The strategy includes farming on highly profitable stablecoin pairs such as LUSD / USD+. Mixed pool (low risk) is a liquidity mining strategy on the Optimism network, utilizing Sushiswap DEX. The strategy includes farming on low risk stablecoin pairs such as USDT / USDC.</p>
+<doc-anchor-target id="section-8">
+    <h5>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#section-8">#</doc-anchor-trigger>
         <span><span class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-600 bg-blue-100 h-8 px-3 text-sm rounded-md">
             <span>***</span>
         </span></span>
