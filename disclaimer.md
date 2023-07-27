@@ -14,9 +14,9 @@ We recommend you to read the technical documentation and the Leech code before u
 
 ### [!badge variant="primary" size="l" text="Smart Contracts Failures"]
 
-Leech smart contracts are open source, readable, and include tests. They are not a direct fork of an existing contract system. Audits of the smart contract are currently in progress, 
-but in any case a successful audit does not guarantee that a new or existing Leech strategy will achieve APY goals or avoid Leech hacks or contracts with which Leech integrates 
-(Curve, Pancake Swap, Uniswap, Venus, Yieldyak etc.).
+Leech smart contracts are open source, readable, and include tests. They are not a direct fork of an existing contract system. Two audits of the smart contracts have already been successfully completed by
+Hacken OÜ. However, a successful audit does not guarantee that a new or existing Leech strategy will achieve APY goals or avoid Leech hacks or contracts with which Leech integrates 
+(Curve, Pancake Swap, Uniswap, Venus, Yieldyak etc.). Also be aware that the current version of Leech protocol is a beta version and as such the above risks are even higher.
 
 Although Leech team has developed most of the source code for the Leech protocol, it does not provide, own or control the Leech protocol,  
 which is managed by smart contracts deployed on the BSC blockchain and Avalanche. Accordingly, no developer or entity involved in the creation 
@@ -49,6 +49,6 @@ Impermanent loss (or Divergence Loss) is associated with providing assets to a l
 
 The Leech team is not responsible for the consequences of using Leech by you from a jurisdiction that restricts or prohibits the use of cryptocurrency, tokens, DeFi protocols or smart contracts and we recommend that you stop using Leech from such jurisdiction. We also recommend to seek a professional legal advice prior to using our protocol in your place of residence.
 
-This Disclaimer can be found at [!badge here](https://docs.leechprotocol.com/disclaimer). Due to constant changes and tendencies arised in the cryptocurrency market, including and especially in DeFi, that cause and create new measures to be taken and conditions for us and you when using DeFi protocols and services, we are forced to make modifications to this document from time to time, which you will be notified about immediately upon visiting our website with the opportunity to review and agree to the new version of the document. We also recommend you to monitor such modifications yourself and if at any point you do not agree with the new changes, we suggest that you stop using Leech.
+This Disclaimer can be found at [!badge here](https://docs.leechprotocol.com/disclaimer). Due to constant changes and tendencies arised in the cryptocurrency market, including and especially in DeFi, that cause and create new measures to be taken and conditions for us and you when using DeFi protocols and services, and also due to the continuous development of Leech Protocol, we are forced to make modifications to this document from time to time, which you will be notified about immediately upon visiting our website with the opportunity to review and agree to the new version of the document. We also recommend you to monitor such modifications yourself and if at any point you do not agree with the new changes, we suggest that you stop using Leech.
 
 LeechProtocol L.L.C-FZ Reg.nr.: 2204042 Address: Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E.
