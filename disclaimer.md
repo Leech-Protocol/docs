@@ -47,7 +47,7 @@ Impermanent loss (or Divergence Loss) is associated with providing assets to a l
 
 ### [!badge variant="primary" size="l" text="Mixed pools Mechanics"]
 
-All our mixed pools will consist of several pairs. For instance, we might add five medium-risk pairs to a high-risk pool. We implement this to enable liquidity reallocation among pairs on platforms like Velodrome in search of the most profitable conditions. At the moment, we have added one token pair to each mixed pool. Mixed pool (medium risk) is a liquidity mining strategy on the Optimism network, utilizing Velodrome DEX. The strategy includes farming on highly profitable stablecoin pairs such as LUSD / USD+. Mixed pool (low risk) is a liquidity mining strategy on the Optimism network, utilizing Sushiswap DEX. The strategy includes farming on low risk stablecoin pairs such as USDT / USDC.
+All our mixed pools will consist of several pairs. For instance, we might add five medium-risk pairs to a high-risk pool. We implement this to enable liquidity reallocation among pairs on platforms like Velodrome in search of the most profitable conditions. At the moment, we have added one token pair to each mixed pool. Mixed pool (medium risk) is a liquidity mining strategy on the Optimism network, utilizing Velodrome DEX. The strategy includes farming on highly profitable stablecoin pairs such as LUSD / MAI. Mixed pool (low risk) is a liquidity mining strategy on the Optimism network, utilizing Sushiswap DEX. The strategy includes farming on low risk stablecoin pairs such as USDT / USDC.
 
 ##### [!badge variant="primary" size="l" text="***"]
 
