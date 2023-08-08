@@ -20,19 +20,19 @@ Light Paper translations are in [Discord](https://discord.gg/LeechProtocol){targ
 
 ### Will Leech Protocol have a token?
 
-You will find out information about our token after the publication of the tokenomics.
+The information about Leech Protocol token will be available after the publication of the tokenomics.
 
 ### Who is investor of the Leech Protocol?
 
-Investor information will be published later, stay tuned.
+The project raised $1.5 million with a valuation of $6.8 million. Detailed investor information will be published later, stay tuned.
 
 ### What is a team experience? 
 
-You can get information about the team in our [Pitch Deck](https://drive.google.com/file/d/1B5eNWF4nsa7JRiRhvgaPkLQrjMDXxqU3/view){target ="_blank"}. 
+The information about the team is avaliable in our [Pitch Deck](https://drive.google.com/file/d/1B5eNWF4nsa7JRiRhvgaPkLQrjMDXxqU3/view){target ="_blank"}. 
 
 ### Does Leech Protocol have an audit?
 
-Leech Protocol audited by Hacken. Report available via the [link](https://hacken.io/wp-content/uploads/2023/02/CSS_LeechProtocol_SC-Audit-Report.pdf){target ="_blank"}.
+Leech Protocol audited by Hacken. Report available via the [link](https://wp.hacken.io/wp-content/uploads/2023/02/CSS_LeechProtocol_SC-Audit-Report.pdf){target ="_blank"}.
 
 ### How secure is the Leech Protocol?
 
@@ -46,11 +46,30 @@ Translations of articles are available at [Discord](https://discord.gg/LeechProt
 
 ### When will automated strategies be launched? 
 
-Automated strategies will be launched in the third stage.
+Automated strategies have already been implemented on the Leech Protocol App (beta). 
+However, automated hedging strategies and v3 strategies will be launched after the 3rd stage of the product launch within the closed Leech Farming Club. Information about Leech Farming Club will be announced later.
 
 ### Which chains does LeechProtocol support? 
 
 For now, we support BSC, Avalanche, Polygon, Optimism, and Arbitrum. But we add new chains monthly, so be tuned in to our socials.
 
 ### How income is generated in the Protocol?
+
 You can get information about the profit of Protocol in our [Pitch Deck](https://drive.google.com/file/d/1B5eNWF4nsa7JRiRhvgaPkLQrjMDXxqU3/view){target ="_blank"} in Revenue Model paragraph.
+
+### What is Mechanic of Mixed pools work?
+
+All our mixed pools will consist of several pairs. For instance, we might add five medium-risk pairs to a high-risk pool. We implement this to enable liquidity reallocation among pairs on platforms like Velodrome in search of the most profitable conditions. 
+At the moment, we have added one token pair to each mixed pool. 
+
+Mixed pool (High risk) is a liquidity mining strategy on the BNB chaine network, utilizing Thena.fi DEX. The strategy includes farming on highly profitable stablecoin pairs such as wUSDR / USDC. 
+
+Mixed pool (low risk) is a liquidity mining strategy on the Optimism network, utilizing Sushiswap DEX. The strategy includes farming on low risk stablecoin pairs such as USDT / USDC.
+
+### What are the deposit/withdrawal fees on the 2nd stage?
+
+There might be few external fees:
+
+- When depositing coins from one blockchain to a pool on a different blockchain, the fee for the Stargate bridge will be ≈$1.
+- When depositing one coin (e.g., USDT) into a pool with another coin (e.g., USDC), the fee for the swap will range ≈ from $0.5 to $1
+- Also, there will be a swap fee if you're creating a pair within an LP by one coin (e.g., USDT), for instance, like USDT/USDC.
