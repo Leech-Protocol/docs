@@ -73,3 +73,7 @@ There might be few external fees:
 - When depositing coins from one blockchain to a pool on a different blockchain, the fee for the Stargate bridge will be ≈$1.
 - When depositing one coin (e.g., USDT) into a pool with another coin (e.g., USDC), the fee for the swap will range ≈ from $0.5 to $1
 - Also, there will be a swap fee if you're creating a pair within an LP by one coin (e.g., USDT), for instance, like USDT/USDC.
+
+### How is APR formed in Leech Protocol pools?
+
+Leech Protocol is a yield aggregator. Therefore, it extracts APR from the pools of the protocols it interacts with.
