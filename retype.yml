@@ -1,7 +1,7 @@
 input: .
 output: .retype
 url: https://docs.leechprotocol.com
-favicon: static/favicon.ico
+favicon: static/favicon.svg
 meta:
   title: " | Leechprotocol.com - Automated cross-chain yield aggregator"
 branding:
