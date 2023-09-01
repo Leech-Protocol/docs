@@ -10,15 +10,32 @@ jobs:
     name: Publish to retype branch
 
     runs-on: ubuntu-latest
-    
+
     permissions:
       contents: write
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout 🛎
+        uses: actions/checkout@v3
 
-      - uses: retypeapp/action-build@latest
+      - name: Build 🏗
+        uses: retypeapp/action-build@latest
 
-      - uses: retypeapp/action-github-pages@latest
-        with:
+      - name: Deploy 📡
+        uses: retypeapp/action-github-pages@latest
+         with:
           update-branch: true
+
+      - name: Ding to Telegram 🛎
+        uses: appleboy/telegram-action@master
+         with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          disable_web_page_preview: true
+          disable_notification: false
+          message: |
+            🚚 Delivery update!
+            ${{ github.actor }} created commit and deploy to server:
+            Commit message: ${{ github.event.commits[0].message }}
+            Repository: ${{ github.repository }}
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
