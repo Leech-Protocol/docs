@@ -64,7 +64,9 @@ At the moment, we have added one token pair to each mixed pool.
 
 Mixed pool (High risk) is a liquidity mining strategy on the BNB chaine network, utilizing Thena.fi DEX. The strategy includes farming on highly profitable stablecoin pairs such as wUSDR / USDC. 
 
-Mixed pool (low risk) is a liquidity mining strategy on the Optimism network, utilizing Sushiswap DEX. The strategy includes farming on low risk stablecoin pairs such as USDT / USDC.
+Mixed pool (Medium risk) is a liquidity mining strategy on the Optimism network, utilizing Velodrome DEX. The strategy includes farming on medium profitable pairs such as sAMMV2-CHI/DAI.
+
+Mixed pool (Low risk) is a liquidity mining strategy on the Optimism network, utilizing Sushiswap DEX. The strategy includes farming on low risk stablecoin pairs such as USDT / USDC.
 
 ### What are the deposit/withdrawal fees on the 2nd stage?
 

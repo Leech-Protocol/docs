@@ -14,14 +14,15 @@ Depending on the risk level chosen, Leech Protocol automatically selects the bes
      DEX: Thena (USDC_wUSDR(v3) Fusion Pool)
      Address: 0x8584eD842584B3f115433f74e4168F549e1Df22D
 
-     Vault Name: Low risk
+     Vault Name: Low Risk
      Network: Optimism 
      DEX: Sushi (USDT/USDC pool)
      Address: 0xAAaC67d94Eca361dbecFD582237641E4AaCecF7f
 
-     Vault Name: Medium risk (Coming soon) 
+     Vault Name: Medium Risk
      Network: Optimism
      DEX: Velodrome v2 (sAMMV2-CHI/DAI)
+     Address: 0x9C95744755795CB03b8DDCBD5Df4fb7656D016CD
 
      Vault Name: General Mixed (Coming soon)
 
