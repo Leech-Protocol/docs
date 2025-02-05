@@ -64,5 +64,3 @@ footer:
       target: blank
 editor:
   enabled: false
-markdown:
-  lineBreaks: soft
