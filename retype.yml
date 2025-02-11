@@ -64,3 +64,12 @@ footer:
       target: blank
 editor:
   enabled: false
+search:
+  hotkeys:
+    - "/"
+
+  maxResults: 20
+  minChars: 2
+  mode: full
+  noResultsFoundMsg: "No results"
+  placeholder: Search
