@@ -1,0 +1,47 @@
+name: Publish Retype powered website to GitHub Pages
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - dev
+
+jobs:
+  publish:
+    name: Publish to pages branch
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v4
+
+      - name: Setup dotnet 🏗
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 7.0.x
+
+      - name: Build 🏗
+        uses: retypeapp/action-build@latest
+
+      - name: Deploy 📡
+        uses: retypeapp/action-github-pages@latest
+        with:
+          branch: pages
+          update-branch: true
+
+      - name: Ding to Telegram 🛎
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          disable_web_page_preview: true
+          disable_notification: false
+          message: |
+            🚚 Delivery update!
+            ${{ github.actor }} created commit and deploy to server:
+            Commit message: ${{ github.event.commits[0].message }}
+            Repository: ${{ github.repository }}
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
