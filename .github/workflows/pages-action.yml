@@ -32,6 +32,15 @@ jobs:
           branch: pages
           update-branch: true
 
+      - name: Clear Cloudflare cache 🆑
+        uses: Cyb3r-Jak3/action-cloudflare-cache@main
+        with:
+          # Zone is required by both methods
+          zone: ${{ secrets.CF_ZONEID }}
+
+          # Using API Token
+          api_token: ${{ secrets.CF_APIKEY }}
+
       - name: Ding to Telegram 🛎
         uses: appleboy/telegram-action@master
         with:
