@@ -12,33 +12,34 @@
     <meta name="generator" content="Retype 3.8.1">
 
     <!-- Primary Meta Tags -->
-    <title>Separate vaults | Leechprotocol.com - Automated cross-chain yield aggregator</title>
-    <meta name="title" content="Separate vaults | Leechprotocol.com - Automated cross-chain yield aggregator">
-    <meta name="description" content="Leech Protocol allows users to easily farm on multiple chains. They deposit their liquidity into the Leech Protocol, which then performs operations...">
+    <title>API | Leechprotocol.com - Automated cross-chain yield aggregator</title>
+    <meta name="title" content="API | Leechprotocol.com - Automated cross-chain yield aggregator">
+    <meta name="description" content="Currently, the API does not implement authentication.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.leechprotocol.com/features/separate_vaults/">
+    <link rel="canonical" href="https://docs.leechprotocol.com/api/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.leechprotocol.com/features/separate_vaults/">
-    <meta property="og:title" content="Separate vaults | Leechprotocol.com - Automated cross-chain yield aggregator">
-    <meta property="og:description" content="Leech Protocol allows users to easily farm on multiple chains. They deposit their liquidity into the Leech Protocol, which then performs operations...">
+    <meta property="og:url" content="https://docs.leechprotocol.com/api/">
+    <meta property="og:title" content="API | Leechprotocol.com - Automated cross-chain yield aggregator">
+    <meta property="og:description" content="Currently, the API does not implement authentication.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.leechprotocol.com/features/separate_vaults/">
-    <meta property="twitter:title" content="Separate vaults | Leechprotocol.com - Automated cross-chain yield aggregator">
-    <meta property="twitter:description" content="Leech Protocol allows users to easily farm on multiple chains. They deposit their liquidity into the Leech Protocol, which then performs operations...">
+    <meta property="twitter:url" content="https://docs.leechprotocol.com/api/">
+    <meta property="twitter:title" content="API | Leechprotocol.com - Automated cross-chain yield aggregator">
+    <meta property="twitter:description" content="Currently, the API does not implement authentication.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../static/favicon.svg" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.8.1.800113770908" rel="stylesheet">
+    <link href="../static/favicon.svg" rel="icon">
+    <link href="../resources/css/retype.css?v=3.8.1.800113770908" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.8.1.800113770908" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.8.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.8.1.800113770908" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.8.1.800113770908" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.8.1" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.8.1.800113770908" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.8.1.800113770908" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -53,10 +54,10 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../" class="flex items-center leading-snug text-2xl">
                             <span class="grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../../static/logo.svg">
-                                <img class="max-h-10 hidden dark:inline-block" src="../../static/logo-dark.svg">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../static/logo.svg">
+                                <img class="max-h-10 hidden dark:inline-block" src="../static/logo-dark.svg">
                             </span>
                         </a>
                     </div>
@@ -70,25 +71,25 @@
                         <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
                             <li class="mr-6">
                                 <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://medium.com/@LeechProtocol" target="_blank">
-                                    <img class="mb-px mr-1" width="18" alt="" src="../../static/medium.png">
+                                    <img class="mb-px mr-1" width="18" alt="" src="../static/medium.png">
                                     <span>Medium</span>
                                 </a>
                             </li>
                             <li class="mr-6">
                                 <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://t.me/LeechProtocolOfficial" target="_blank">
-                                    <img class="mb-px mr-1" width="18" alt="" src="../../static/telegram.png">
+                                    <img class="mb-px mr-1" width="18" alt="" src="../static/telegram.png">
                                     <span>Telegram</span>
                                 </a>
                             </li>
                             <li class="mr-6">
                                 <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://discord.gg/FGVmZycXsd" target="_blank">
-                                    <img class="mb-px mr-1" width="18" alt="" src="../../static/discord.png">
+                                    <img class="mb-px mr-1" width="18" alt="" src="../static/discord.png">
                                     <span>Discord</span>
                                 </a>
                             </li>
                             <li class="mr-6">
                                 <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://twitter.com/LeechProtocol" target="_blank">
-                                    <img class="mb-px mr-1" width="18" alt="" src="../../static/twitter.png">
+                                    <img class="mb-px mr-1" width="18" alt="" src="../static/twitter.png">
                                     <span>Twitter</span>
                                 </a>
                             </li>
@@ -177,25 +178,25 @@
                                 <ul class="flex flex-wrap justify-center items-center">
                                     <li class="mr-6">
                                         <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://medium.com/@LeechProtocol" target="_blank">
-                                            <img class="mb-px mr-1" width="18" alt="" src="../../static/medium.png">
+                                            <img class="mb-px mr-1" width="18" alt="" src="../static/medium.png">
                                             <span>Medium</span>
                                         </a>
                                     </li>
                                     <li class="mr-6">
                                         <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://t.me/LeechProtocolOfficial" target="_blank">
-                                            <img class="mb-px mr-1" width="18" alt="" src="../../static/telegram.png">
+                                            <img class="mb-px mr-1" width="18" alt="" src="../static/telegram.png">
                                             <span>Telegram</span>
                                         </a>
                                     </li>
                                     <li class="mr-6">
                                         <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://discord.gg/FGVmZycXsd" target="_blank">
-                                            <img class="mb-px mr-1" width="18" alt="" src="../../static/discord.png">
+                                            <img class="mb-px mr-1" width="18" alt="" src="../static/discord.png">
                                             <span>Discord</span>
                                         </a>
                                     </li>
                                     <li class="mr-6">
                                         <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://twitter.com/LeechProtocol" target="_blank">
-                                            <img class="mb-px mr-1" width="18" alt="" src="../../static/twitter.png">
+                                            <img class="mb-px mr-1" width="18" alt="" src="../static/twitter.png">
                                             <span>Twitter</span>
                                         </a>
                                     </li>
@@ -231,35 +232,490 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="separate-vaults" class="break-words">
+<doc-anchor-target id="api" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#separate-vaults">#</doc-anchor-trigger>
-        <span>Separate vaults</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api">#</doc-anchor-trigger>
+        <span>API</span>
     </h1>
 </doc-anchor-target>
-<p>Leech Protocol allows users to easily farm on multiple chains. They deposit their
-liquidity into the Leech Protocol, which then performs operations that the user would normally do manually.</p>
-<p>Depending on the type of strategy assigned to the vault - we distribute the user&#x27;s deposit into liquidity pairs on Dexes. The deposit is splitted according to the shares necessary for the pair on DeX we work with, and then swapped and added as liquidity onto DeX. Next we receive rewards from the DeX, swap them into necessary tokens from the pair we work with and return them into the deposit to get more rewards.</p>
-<p>With each swap, the amount of the deposit body can slightly change due to slippage. However, in the long term this deposit is growing as well as the user’s profit.</p>
-<p>How will it work? The user chooses a main asset, such as USDT or USDC, and deposits liquidity. Our system swaps liquidity, bridges it (if needed), and distributes it into a defined pool list. For instance, if a user picks USDT as their main asset, the system bridges it, swaps liquidity to different pools like USDT/USDC, USDC/MAI, ETH/wUSDR, etc.</p>
-<p>As for now we offer the following separate vaults for deposit/withdraw with the following networks:</p>
+<p>Currently, the API does not implement authentication. For production or public-facing deployments, we strongly recommend integrating a secure method (e.g., API keys, JWT tokens) to control access.</p>
+<doc-anchor-target id="base-url--environment-variables">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#base-url--environment-variables">#</doc-anchor-trigger>
+        <span>Base URL &amp; Environment Variables</span>
+    </h3>
+</doc-anchor-target>
+<p><code v-pre>http://164.90.156.209/api/testing</code></p>
+<doc-anchor-target id="delta-calculation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#delta-calculation">#</doc-anchor-trigger>
+        <span>Delta Calculation</span>
+    </h3>
+</doc-anchor-target>
+<p>Delta is a volatility measure used to model price uncertainty over time. It represents the average absolute percentage change in price over a given window.</p>
+<doc-anchor-target id="step-by-step">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-by-step">#</doc-anchor-trigger>
+        <span>Step-by-step:</span>
+    </h3>
+</doc-anchor-target>
+<p>Step 1: For each pair of consecutive average prices P[t] and P[t+1], compute the absolute percentage change:</p>
+<p><code v-pre>delta_t = abs((P[t+1] - P[t]) / P[t])</code></p>
+<p>Mathematically:</p>
+<p><code v-pre>deltaₜ = |P[t+1] - P[t]| / P[t]</code></p>
+<p>Step 2: Take a rolling average of delta_t over a window (default: averaging_range = steps / 2). This smooths out short-term noise:</p>
+<p><code v-pre>rolling_delta = delta_series.rolling(window=averaging_range).mean()</code></p>
+<doc-anchor-target id="endpoints">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#endpoints">#</doc-anchor-trigger>
+        <span>Endpoints</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="post-calculate-single-probability">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#post-calculate-single-probability">#</doc-anchor-trigger>
+        <span>POST /calculate-single-probability</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="description">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#description">#</doc-anchor-trigger>
+        <span>Description</span>
+    </h3>
+</doc-anchor-target>
+<p>Calculates the probability that a given asset&#x27;s price will remain within a specified range (± threshold) for a certain number of time steps, using manually provided inputs.</p>
+<p>Request</p>
+<ul>
+<li>Methods: POST</li>
+<li>URL :<code v-pre>/calculate-single-probability</code></li>
+</ul>
+<doc-anchor-target id="request-body-json">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#request-body-json">#</doc-anchor-trigger>
+        <span>Request Body (JSON)</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: right;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currentPrice</td>
+<td>float</td>
+<td style="text-align: left;">Current price of the asset.</td>
+<td style="text-align: right;">2100.25</td>
+</tr>
+<tr>
+<td>delta</td>
+<td>float</td>
+<td style="text-align: left;">Volatility measure (absolute delta; capped at 0.05).</td>
+<td style="text-align: right;">0.0045</td>
+</tr>
+<tr>
+<td>steps</td>
+<td>integer</td>
+<td style="text-align: left;">Prediction horizon (in minutes).</td>
+<td style="text-align: right;">120</td>
+</tr>
+<tr>
+<td>range</td>
+<td>float</td>
+<td style="text-align: left;">Target range threshold (e.g., 0.005 for ±0.5%).</td>
+<td style="text-align: right;">0.005</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="response">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#response">#</doc-anchor-trigger>
+        <span>Response</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="success-http-200">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#success-http-200">#</doc-anchor-trigger>
+        <span>Success (HTTP 200)</span>
+    </h3>
+</doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none"> Vault Name: USDT
- Network: Avalanche
- DEX: Yak (USDT (Aave) pool)
- Address: 0xE0a7D8B869590Cc4CC35b7E1ae66A5f3c03255D3
-
-
- Vault Name: USDC
- Network: BNB Chain
- DEX: Venus (USDC pool)
- Address: 0x980B9CA3a9Ba386a34bbFF773C87f2884Fb57742
-
-
- Vault Name: USDT/USDC 
- Network: BNB Chain
- DEX: Biswap (USDT/USDC pool)
- Address: 0xeB7355898247F4f652369CB20F537ba5ec9ED7BE</code></pre>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;probability_within_range&quot;: 0.6781,
+  &quot;lower_bound&quot;: 2089.75,
+  &quot;upper_bound&quot;: 2150.75,
+  &quot;confidence_interval_80&quot;: {
+    &quot;lower&quot;: 2092.11,
+    &quot;upper&quot;: 2159.30
+  }
+}</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>Probability_within_range: Predicted chance (in fraction) that the future price will be within the target range.</li>
+<li>Lower_bound / upper_bound: The target range based on the current price and the given threshold.</li>
+<li>Confidence_interval_80: 80% confidence interval computed from the underlying normal distribution.</li>
+</ul>
+<doc-anchor-target id="post-calculate-current-market-probability">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#post-calculate-current-market-probability">#</doc-anchor-trigger>
+        <span>POST /calculate-current-market-probability</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="description-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#description-1">#</doc-anchor-trigger>
+        <span>Description</span>
+    </h3>
+</doc-anchor-target>
+<p>Computes the probability using live market data. This endpoint retrieves the latest price data, calculates the volatility measure, and then invokes the prediction algorithm.</p>
+<doc-anchor-target id="request">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#request">#</doc-anchor-trigger>
+        <span>Request</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Method: POST</li>
+<li>URL: <code v-pre>/calculate-current-market-probability</code></li>
+</ul>
+<doc-anchor-target id="request-body-json-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#request-body-json-1">#</doc-anchor-trigger>
+        <span>Request Body (JSON)</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>steps</td>
+<td>integer</td>
+<td>Number of minutes ahead to run the prediction</td>
+<td>120</td>
+</tr>
+<tr>
+<td>range</td>
+<td>float</td>
+<td>Range threshold (e.g., 0.005 for ±0.5%)</td>
+<td>0.005</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="response-1">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#response-1">#</doc-anchor-trigger>
+        <span>Response</span>
+    </h2>
+</doc-anchor-target>
+<p>The response format is identical to<code v-pre>/calculate-single-probability.</code></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Note: This endpoint automatically fetches live data in Uniswap ETH/USDC pool to determine the current price and volatility.</h5>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="post-test-historical">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#post-test-historical">#</doc-anchor-trigger>
+        <span>POST /test-historical</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="description-2">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#description-2">#</doc-anchor-trigger>
+        <span>Description</span>
+    </h2>
+</doc-anchor-target>
+<p>This endpoint runs the prediction model across an entire historical dataset. In addition to returning overall metrics (e.g., average probability, accuracy, interval scores), it includes a debug section with detailed prediction data for selected timestamps.</p>
+<doc-anchor-target id="request-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#request-1">#</doc-anchor-trigger>
+        <span>Request</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Method: POST</li>
+<li>URL: <code v-pre>/test-historical</code></li>
+</ul>
+<doc-anchor-target id="request-body-json-2">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#request-body-json-2">#</doc-anchor-trigger>
+        <span>Request Body (JSON)</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dataset</td>
+<td>string</td>
+<td>Name of the dataset CSV file</td>
+<td>uniswap_eth_usdc_minute_2023-08-01_2024-07-31.csv</td>
+</tr>
+<tr>
+<td>steps</td>
+<td>int</td>
+<td>Prediction steps ahead (in minutes).</td>
+<td>120</td>
+</tr>
+<tr>
+<td>range</td>
+<td>float</td>
+<td>Threshold for the target range (e.g., 0.005 for ±0.5%).</td>
+<td>0.005</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="response-2">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#response-2">#</doc-anchor-trigger>
+        <span>Response</span>
+    </h2>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;overall&quot;: {
+    &quot;processed_rows&quot;: 498189,
+    &quot;average_probability_within_range&quot;: 0.6473,
+    &quot;naive&quot;: {
+      &quot;total&quot;: 498189,
+      &quot;in_wins&quot;: 323268,
+      &quot;naive_accuracy_percentage&quot;: 64.89
+    },
+    &quot;high_confidence&quot;: {
+      &quot;range_in_total&quot;: 39547,
+      &quot;range_in_wins&quot;: 30818,
+      &quot;range_in_accuracy_percentage&quot;: 77.93,
+      &quot;range_out_total&quot;: 50,
+      &quot;range_out_wins&quot;: 46,
+      &quot;range_out_accuracy_percentage&quot;: 92.00
+    }
+  },
+  &quot;static&quot;: {
+    &quot;total&quot;: 323268,
+    &quot;average_probability&quot;: 66.99,
+    &quot;naive_accuracy_percentage&quot;: 100.0,
+    &quot;cases_prob_over_80&quot;: 30818,
+    &quot;cases_prob_under_1&quot;: 4
+  },
+  &quot;non_static&quot;: {
+    &quot;total&quot;: 174921,
+    &quot;average_probability&quot;: 60.52,
+    &quot;naive_accuracy_percentage&quot;: 0.0,
+    &quot;cases_prob_over_80&quot;: 8729,
+    &quot;cases_prob_under_1&quot;: 46
+  },
+  &quot;debug&quot;: {
+    &quot;2023-12-28T09:55:00&quot;: {
+      &quot;initial_price&quot;: 2392.14,
+      &quot;future_price&quot;: 2402.47,
+      &quot;delta&quot;: 0.00074,
+      &quot;predicted_probability&quot;: 0.4480,
+      &quot;predicted_range&quot;: [2380.18, 2404.10],
+      &quot;target_range&quot;: [2380.18, 2404.10],
+      &quot;actual_in_range&quot;: true},
+    &quot;2024-03-25T20:27:00&quot;: {
+      &quot;initial_price&quot;: 3635.95,
+      &quot;future_price&quot;: 3606.98,
+      &quot;delta&quot;: 0.00046,
+      &quot;predicted_probability&quot;: 0.2429,
+      &quot;predicted_range&quot;: [3642.69, 3691.88],
+      &quot;target_range&quot;: [3617.77, 3654.13],
+      &quot;actual_in_range&quot;: false}
+    // ... similar entries for other timestamps
+  }
+}</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="explanation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#explanation">#</doc-anchor-trigger>
+        <span>Explanation</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Overall: Aggregated metrics for the entire dataset (naive predictions, high‑confidence predictions, etc.).</li>
+<li>Static / non_static: Breakdowns based on the actual behavior:
+<ul>
+<li>Static: Timeframes where the future price remained within the target range.</li>
+<li>Non-static: Timeframes where the future price fell outside the target range.</li>
+</ul>
+</li>
+<li>Debug: Optional. Contains detailed prediction data (e.g., for timestamps “2023-12-28T09:55:00”, “2024-03-25T20:27:00”, etc.) for advanced debugging and analysis. Debug cells setup manually in the code by request.</li>
+</ul>
+<doc-anchor-target id="datasets">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#datasets">#</doc-anchor-trigger>
+        <span>Datasets</span>
+    </h3>
+</doc-anchor-target>
+<p>The following historical datasets are available for testing and evaluating the prediction model. Each file contains minute-level price data for the ETH/USDC pair on Uniswap.</p>
+<doc-anchor-target id="1uniswap_eth_usdc_minute_2023-08-01_2024-07-31csv">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1uniswap_eth_usdc_minute_2023-08-01_2024-07-31csv">#</doc-anchor-trigger>
+        <span>1.uniswap_eth_usdc_minute_2023-08-01_2024-07-31.csv</span>
+    </h4>
+</doc-anchor-target>
+<p><strong>Period</strong>: August 1, 2023 → July 31, 2024 <br>
+<strong>Chain</strong>: Ethereum <br>
+<strong>Download</strong>: <a href="https://drive.google.com/file/d/1jToHNGLBvACRTSrA1LZidmCAubCNBIV4/view?usp=sharing" target="_blank"><span class="docs-emoji">&#x1F4E5;</span> Google Drive Link</a></p>
+<doc-anchor-target id="2-uniswap_eth_usdc_minute_2024-12-31_2025-04-14csv">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-uniswap_eth_usdc_minute_2024-12-31_2025-04-14csv">#</doc-anchor-trigger>
+        <span>2. uniswap_eth_usdc_minute_2024-12-31_2025-04-14.csv</span>
+    </h4>
+</doc-anchor-target>
+<p><strong>Period</strong>: December 31, 2024 → April 14, 2025 <br>
+<strong>Chain</strong>: Ethereum <br>
+<strong>Download</strong>: <a href="https://drive.google.com/file/d/1jbf7wE79uUgyjiftNjtRMzQzYAQCKZ1f/view?usp=sharing" target="_blank"><span class="docs-emoji">&#x1F4E5;</span> Google Drive Link</a></p>
+<doc-anchor-target id="error-handling">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#error-handling">#</doc-anchor-trigger>
+        <span>Error Handling</span>
+    </h3>
+</doc-anchor-target>
+<p>If an error occurs, the API returns an HTTP 500 status with an error message in JSON format:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+  &quot;error&quot;: &quot;Description of error.&quot;
+}</code></pre>
+</doc-codeblock></div>
+<p>Check the server logs for more details if you encounter issues.</p>
+<doc-anchor-target id="examples">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#examples">#</doc-anchor-trigger>
+        <span>Examples:</span>
+    </h3>
+</doc-anchor-target>
+<p>Test 1:
+Request</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+    &quot;dataset&quot;: &quot;uniswap_eth_usdc_minute_2024-12-31_2025-04-14.csv&quot;,
+    &quot;steps&quot;: 240,
+    &quot;range&quot;: 0.01
+}</code></pre>
+</doc-codeblock></div>
+<p>Response</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+    &quot;debug&quot;: {},
+    &quot;non_static&quot;: {
+        &quot;average_probability&quot;: 42.08178131360263,
+        &quot;cases_prob_over_80&quot;: 8789,
+        &quot;cases_prob_under_1&quot;: 9900,
+        &quot;total&quot;: 61679
+    },
+    &quot;overall&quot;: {
+        &quot;average_probability_within_range&quot;: 0.5067226948098416,
+        &quot;high_confidence&quot;: {
+            &quot;range_in_accuracy_percentage&quot;: 74.21143745782108,
+            &quot;range_in_total&quot;: 34081,
+            &quot;range_in_wins&quot;: 25292,
+            &quot;range_out_accuracy_percentage&quot;: 68.0225367596537,
+            &quot;range_out_total&quot;: 14554,
+            &quot;range_out_wins&quot;: 9900
+        },
+        &quot;naive&quot;: {
+            &quot;in_wins&quot;: 81552,
+            &quot;naive_accuracy_in_range_percentage&quot;: 56.93739483770971,
+            &quot;naive_accuracy_out_range_percentage&quot;: 43.06260516229029,
+            &quot;total&quot;: 143231
+        },
+        &quot;processed_rows&quot;: 143231
+    },
+    &quot;static&quot;: {
+        &quot;average_probability&quot;: 57.16938444660028,
+        &quot;cases_prob_over_80&quot;: 25292,
+        &quot;cases_prob_under_1&quot;: 4654,
+        &quot;total&quot;: 81552
+    }
+}</code></pre>
+</doc-codeblock></div>
+<p>Test 2:</p>
+<p>Request</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+    &quot;dataset&quot;: &quot;uniswap_eth_usdc_minute_2024-12-31_2025-04-14.csv&quot;,
+    &quot;steps&quot;: 120,
+    &quot;range&quot;: 0.005
+}</code></pre>
+</doc-codeblock></div>
+<p>Response</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">{
+    &quot;debug&quot;: {},
+    &quot;non_static&quot;: {
+        &quot;average_probability&quot;: 42.14056895283416,
+        &quot;cases_prob_over_80&quot;: 304,
+        &quot;cases_prob_under_1&quot;: 4645,
+        &quot;total&quot;: 77410
+    },
+    &quot;overall&quot;: {
+        &quot;average_probability_within_range&quot;: 0.46652023281710875,
+        &quot;high_confidence&quot;: {
+            &quot;range_in_accuracy_percentage&quot;: 65.33637400228051,
+            &quot;range_in_total&quot;: 877,
+            &quot;range_in_wins&quot;: 573,
+            &quot;range_out_accuracy_percentage&quot;: 80.40505452657088,
+            &quot;range_out_total&quot;: 5777,
+            &quot;range_out_wins&quot;: 4645
+        },
+        &quot;naive&quot;: {
+            &quot;in_wins&quot;: 66061,
+            &quot;naive_accuracy_in_range_percentage&quot;: 46.04484529974699,
+            &quot;naive_accuracy_out_range_percentage&quot;: 53.95515470025301,
+            &quot;total&quot;: 143471
+        },
+        &quot;processed_rows&quot;: 143471
+    },
+    &quot;static&quot;: {
+        &quot;average_probability&quot;: 51.938526356117066,
+        &quot;cases_prob_over_80&quot;: 573,
+        &quot;cases_prob_under_1&quot;: 1132,
+        &quot;total&quot;: 66061
+    }
+}</code></pre>
 </doc-codeblock></div>
 
                                 
@@ -270,20 +726,20 @@ liquidity into the Leech Protocol, which then performs operations that the user 
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../features/composite_vaults/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../introduction/what_makes_leech_protocol_unique/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Сomposite vault (Mixpool and Risk graded)</span>
+                                                <span class="block mt-1">What makes Leech Protocol unique?</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../features/cross-chain/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../api/authentication/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Cross-​chain</span>
+                                                <span class="block mt-1">Authentication</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -298,25 +754,25 @@ liquidity into the Leech Protocol, which then performs operations that the user 
                                     <ul class="flex flex-wrap items-center text-sm">
                                         <li>
                                             <a class="inline-flex items-center mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://medium.com/@LeechProtocol" target="_blank">
-                                                <img class="mb-px mr-1" width="18" alt="" src="../../static/medium.png">
+                                                <img class="mb-px mr-1" width="18" alt="" src="../static/medium.png">
                                                 <span>Medium</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a class="inline-flex items-center mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://t.me/LeechProtocolOfficial" target="_blank">
-                                                <img class="mb-px mr-1" width="18" alt="" src="../../static/telegram.png">
+                                                <img class="mb-px mr-1" width="18" alt="" src="../static/telegram.png">
                                                 <span>Telegram</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a class="inline-flex items-center mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://discord.gg/FGVmZycXsd" target="_blank">
-                                                <img class="mb-px mr-1" width="18" alt="" src="../../static/discord.png">
+                                                <img class="mb-px mr-1" width="18" alt="" src="../static/discord.png">
                                                 <span>Discord</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a class="inline-flex items-center mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://twitter.com/LeechProtocol" target="_blank">
-                                                <img class="mb-px mr-1" width="18" alt="" src="../../static/twitter.png">
+                                                <img class="mb-px mr-1" width="18" alt="" src="../static/twitter.png">
                                                 <span>Twitter</span>
                                             </a>
                                         </li>
@@ -361,6 +817,6 @@ liquidity into the Leech Protocol, which then performs operations that the user 
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Separate vaults", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "API", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
