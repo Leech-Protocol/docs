@@ -41,9 +41,9 @@ Calculating this area for ranges relevant to **Uniswap CLMM pools** produces pre
 
 For consecutive asset prices \( P[t] \) and \( P[t+1] \), the relative change is computed as:
 
-```math
+$$
 \delta_t = \left|\frac{P[t+1] - P[t]}{P[t]}\right|
-```
+$$
 
 **Noise Reduction:**
 
