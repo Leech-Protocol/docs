@@ -12,24 +12,24 @@
     <meta name="generator" content="Retype 3.11.0">
 
     <!-- Primary Meta Tags -->
-    <title>Disclaimer | Leechprotocol.com - Automated cross-chain yield aggregator</title>
-    <meta name="title" content="Disclaimer | Leechprotocol.com - Automated cross-chain yield aggregator">
-    <meta name="description" content="The transactions you can perform using the Leech protocol (“Leech”) are superficially similar to traditional financial transactions, but in fact they...">
+    <title>Risk Module and WEB3 | Leechprotocol.com - Automated cross-chain yield aggregator</title>
+    <meta name="title" content="Risk Module and WEB3 | Leechprotocol.com - Automated cross-chain yield aggregator">
+    <meta name="description" content="This document provides a technical demonstration of the Risk Module, designed to estimate the probability that an asset's price will remain within a...">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://docs.leechprotocol.com/disclaimer/">
+    <link rel="canonical" href="https://docs.leechprotocol.com/risk_module/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://docs.leechprotocol.com/disclaimer/">
-    <meta property="og:title" content="Disclaimer | Leechprotocol.com - Automated cross-chain yield aggregator">
-    <meta property="og:description" content="The transactions you can perform using the Leech protocol (“Leech”) are superficially similar to traditional financial transactions, but in fact they...">
+    <meta property="og:url" content="https://docs.leechprotocol.com/risk_module/">
+    <meta property="og:title" content="Risk Module and WEB3 | Leechprotocol.com - Automated cross-chain yield aggregator">
+    <meta property="og:description" content="This document provides a technical demonstration of the Risk Module, designed to estimate the probability that an asset's price will remain within a...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://docs.leechprotocol.com/disclaimer/">
-    <meta property="twitter:title" content="Disclaimer | Leechprotocol.com - Automated cross-chain yield aggregator">
-    <meta property="twitter:description" content="The transactions you can perform using the Leech protocol (“Leech”) are superficially similar to traditional financial transactions, but in fact they...">
+    <meta property="twitter:url" content="https://docs.leechprotocol.com/risk_module/">
+    <meta property="twitter:title" content="Risk Module and WEB3 | Leechprotocol.com - Automated cross-chain yield aggregator">
+    <meta property="twitter:description" content="This document provides a technical demonstration of the Risk Module, designed to estimate the probability that an asset's price will remain within a...">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
@@ -39,6 +39,7 @@
     <script data-cfasync="false" src="../resources/js/config.js?v=3.11.0.814964722701" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.11.0.814964722701" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.11.0.814964722701" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -232,108 +233,158 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="retype-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="disclaimer" class="break-words">
+<doc-anchor-target id="risk-module--web3--a-data-driven-approach-to-risk-analysis" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#disclaimer">#</doc-anchor-trigger>
-        <span>Disclaimer</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#risk-module--web3--a-data-driven-approach-to-risk-analysis">#</doc-anchor-trigger>
+        <span>Risk Module &amp; WEB3: <span class="docs-emoji">&#x1F4CA;</span> A Data-Driven Approach to Risk Analysis</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="section">
+<doc-anchor-target id="introduction-">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#introduction-">#</doc-anchor-trigger>
+        <span>Introduction <span class="docs-emoji">&#x1F680;</span></span>
+    </h2>
+</doc-anchor-target>
+<p>This document provides a technical demonstration of the <strong>Risk Module</strong>, designed to estimate the probability that an asset&#x27;s price will remain within a specified range over a given timeframe.<br />
+The primary objective is assessing market volatility through statistical techniques grounded in the <strong>normal distribution model</strong>.<br />
+Furthermore, it outlines a broader conceptual vision — showing how traditional financial methodologies can gain new efficiencies within <strong>WEB3</strong> environments, thanks to the unprecedented availability of open, transparent data.</p>
+<hr>
+<doc-anchor-target id="overview-of-the-risk-module-">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#overview-of-the-risk-module-">#</doc-anchor-trigger>
+        <span>Overview of the Risk Module <span class="docs-emoji">&#x1F4C8;</span></span>
+    </h2>
+</doc-anchor-target>
+<p>The Risk Module evaluates the likelihood of an asset’s price remaining within a predetermined range (± threshold) after a set number of steps (minutes).<br />
+The core concept involves constructing a <strong>probability distribution of future prices</strong> based on current volatility measurements.</p>
+<hr>
+<doc-anchor-target id="key-technical-components">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#key-technical-components">#</doc-anchor-trigger>
+        <span>Key Technical Components</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="1-normal-distribution-construction-and-probability-calculation-">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#section">#</doc-anchor-trigger>
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-warning-text bg-badge-warning border border-badge-warning-border h-8 px-3 text-sm rounded-md">
-            <span>General DeFi Risks</span>
-        </span></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-normal-distribution-construction-and-probability-calculation-">#</doc-anchor-trigger>
+        <span>1. Normal Distribution Construction and Probability Calculation <span class="docs-emoji">&#x1F514;</span></span>
     </h3>
 </doc-anchor-target>
-<p>The transactions you can perform using the Leech protocol (“Leech”) are superficially similar to traditional financial transactions, but in fact they are very different.<br />
-DeFi has unique costs and benefits, risks and protection mechanisms. Please keep this fact in mind when using this website and do not use Leech or any other system
-described on this website without a sufficient understanding of their unique risks and how they differ from traditional financial transactions.<br />
-The only way to fully understand such risks is to have a clear understanding of the relevant technical systems and the incentive design mechanisms they embody.<br />
-We recommend you to read the technical documentation and the Leech code before using them, and avoid depositing or lending more than 10-30% of your funds for DeFi protocols, including Leech.</p>
-<doc-anchor-target id="section-1">
+<p><strong>Distribution Modeling:</strong></p>
+<p>The Risk Module builds a normal distribution reflecting price volatility.<br />
+The <strong>area under this curve</strong> within a target range directly translates into the probability of the price remaining within that range.</p>
+<p><strong>Example:</strong></p>
+<p>Calculating this area for ranges relevant to <strong>Uniswap CLMM pools</strong> produces precise probabilities essential for risk assessment.</p>
+<hr>
+<doc-anchor-target id="2-volatility-measurement-delta-">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#section-1">#</doc-anchor-trigger>
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-primary-text bg-badge-primary border border-badge-primary-border h-8 px-3 text-sm rounded-md">
-            <span>Smart Contracts Failures</span>
-        </span></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-volatility-measurement-delta-">#</doc-anchor-trigger>
+        <span>2. Volatility Measurement (Delta) <span class="docs-emoji">&#x2696;&#xFE0F;</span></span>
     </h3>
 </doc-anchor-target>
-<p>Leech smart contracts are open source, readable, and include tests. They are not a direct fork of an existing contract system. Two audits of the smart contracts have already been successfully completed by
-Hacken OÜ. However, a successful audit does not guarantee that a new or existing Leech strategy will achieve APY goals or avoid Leech hacks or contracts with which Leech integrates
-(Curve, Pancake Swap, Uniswap, Venus, Yieldyak etc.). Also be aware that the current version of Leech protocol is a beta version and as such the above risks are even higher.</p>
-<p>Although Leech team has developed most of the source code for the Leech protocol, it does not provide, own or control the Leech protocol,<br />
-which is managed by smart contracts deployed on the BSC blockchain and Avalanche. Accordingly, no developer or entity involved in the creation
-of the Leech protocol will be liable for any claim or loss arising from your use, inability to use or your interactions with other users of the Leech protocol,
-including any direct, indirect, incidental, special, exemplary, punitive or consequential damages or lost profits, cryptocurrency, tokens or anything else of value.</p>
-<doc-anchor-target id="section-2">
+<p><strong>Calculation Method:</strong></p>
+<p>For consecutive asset prices ( P[t] ) and ( P[t+1] ), the relative change is computed as:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-latex"><code v-pre class="language-latex">\delta_t = \left|\frac{P[t+1] - P[t]}{P[t]}\right|</code></pre>
+</doc-codeblock></div>
+<p><strong>Noise Reduction:</strong></p>
+<p>A rolling average smooths short-term fluctuations, generating a more stable volatility measure.</p>
+<hr>
+<doc-anchor-target id="3-directional-movement-probabilities-">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#section-2">#</doc-anchor-trigger>
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-primary-text bg-badge-primary border border-badge-primary-border h-8 px-3 text-sm rounded-md">
-            <span>Composability Risks</span>
-        </span></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-directional-movement-probabilities-">#</doc-anchor-trigger>
+        <span>3. Directional Movement Probabilities <span class="docs-emoji">&#x1F504;</span></span>
     </h3>
 </doc-anchor-target>
-<p>Leech protocol manage many different assets and interact with many other protocols. This ability to link contracts gives Leech its value, but interacting with multiple contracts creates a risk if one of the contracts fails. Leech does its best to audit and assess the risks of the contracts Leech handles, but deposits are subject to the risks inherent in each strategy. Study the strategies used by the vaults in which you deposit to familiarize yourself with the risks.</p>
-<p>We also highlight that transactions via protocols and contracts may be subject to additional third-party fees, such as cross-chain bridge fees or stablecoin exchange fees.</p>
-<doc-anchor-target id="section-3">
+<p>The module also outputs <strong>directional probabilities</strong> (upward vs. downward movement).<br />
+Initially, probabilities are equal (50/50), but the model can adapt dynamically through:</p>
+<ul>
+<li><p><strong>Technical Analysis:</strong><br />
+Deviations from moving averages and related metrics adjust parameters for greater prediction accuracy.</p>
+</li>
+<li><p><strong>Machine Learning &amp; Clustering:</strong><br />
+Historical data is categorized into clusters (e.g., volatility regimes), enabling adaptive predictions based on market state recognition.</p>
+</li>
+</ul>
+<hr>
+<doc-anchor-target id="4-focus-on-extremes-">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#section-3">#</doc-anchor-trigger>
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-primary-text bg-badge-primary border border-badge-primary-border h-8 px-3 text-sm rounded-md">
-            <span>Rug Pull Risks</span>
-        </span></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#4-focus-on-extremes-">#</doc-anchor-trigger>
+        <span>4. Focus on Extremes <span class="docs-emoji">&#x1F6A9;</span></span>
     </h3>
 </doc-anchor-target>
-<p>If the team behind a token, either whitelisted or not, decides to abandon its project and takes the investors’ money, the project’s token will probably be worth $0. You are responsible for doing your own due diligence of the project and should understand that crypto are very-high risk, speculative investments. You should be aware and prepared to potentially lose some or all of the money invested.</p>
-<doc-anchor-target id="section-4">
+<p>The model emphasizes <strong>extreme probabilities</strong> — values far from the 40–60% range — which typically signify critical volatility shifts rather than noise.</p>
+<p><figure class="content-center">
+    <a href="../static/group_1.png">
+        <img src="../static/group_1.png" alt="Risk module diagram" class="rounded-image-rounded border-image-border border-image-border-width" />
+    </a>
+    <figcaption class="caption">Risk module diagram</figcaption>
+</figure>
+</p>
+<hr>
+<doc-anchor-target id="current-implementation-">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#current-implementation-">#</doc-anchor-trigger>
+        <span>Current Implementation <span class="docs-emoji">&#x1F6E0;&#xFE0F;</span></span>
+    </h2>
+</doc-anchor-target>
+<p>An <strong>MVP version</strong> of the Risk Module is operational, capable of evaluating volatility predictions in both live-market and historical contexts.<br />
+It effectively captures significant volatility signals beyond ordinary market fluctuations.</p>
+<hr>
+<doc-anchor-target id="the-vision-leveraging-open-data-for-enhanced-risk-analysis-">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#the-vision-leveraging-open-data-for-enhanced-risk-analysis-">#</doc-anchor-trigger>
+        <span>The Vision: Leveraging Open Data for Enhanced Risk Analysis <span class="docs-emoji">&#x1F310;</span></span>
+    </h2>
+</doc-anchor-target>
+<p>Beyond its current implementation, this project envisions comprehensive, data-driven market modeling by integrating classical finance with WEB3 analytics.<br />
+The transparent, publicly accessible data from blockchains — wallet interactions, transactions, and liquidity flows — enables <strong>richer insights</strong> and <strong>smarter risk management</strong>.</p>
+<hr>
+<doc-anchor-target id="1-proven-reliability-of-classical-methods">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#section-4">#</doc-anchor-trigger>
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-primary-text bg-badge-primary border border-badge-primary-border h-8 px-3 text-sm rounded-md">
-            <span>Rate</span>
-        </span></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-proven-reliability-of-classical-methods">#</doc-anchor-trigger>
+        <span>1. Proven Reliability of Classical Methods</span>
     </h3>
 </doc-anchor-target>
-<p>The stated APR or APY for a given token, vault or strategy (‘Rate&#x27;) is expressed in units of the specific token in question, not in U.S. dollars or other fiat currencies. Each Rate is a forward-looking prediction based on a good faith belief as to how to reasonably predict results over the relevant period, but such belief is subject to numerous assumptions, risks and uncertainties (including smart contract security risks and third party actions) that could result in a material change (lower or higher) in APR or APY denominated in tokens. Rates are not offers, promises, agreements, guarantees or commitments by any person or group, but depend primarily on the performance of smart contracts and other autonomous or semi-autonomous systems (including third-party systems) and how third parties interact with those systems after you make a deposit. Even if a particular predicted Rate is achieved, you may still incur a financial loss in fiat money if the fiat money denominated value of the relevant tokens (your deposit and any tokens allocated or distributed to you in accordance with the Rate) declines during the term of the deposit. APR and APY are not interest rates payable on debt.</p>
-<doc-anchor-target id="section-5">
+<ul>
+<li>Classical finance methods (e.g., normal distribution-based volatility models) have proven reliable for decades.</li>
+<li>Applying them to WEB3 preserves methodological rigor while leveraging greater data accessibility.</li>
+</ul>
+<hr>
+<doc-anchor-target id="2-enhancement-through-web3-data-abundance">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#section-5">#</doc-anchor-trigger>
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-primary-text bg-badge-primary border border-badge-primary-border h-8 px-3 text-sm rounded-md">
-            <span>Asset Risks</span>
-        </span></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-enhancement-through-web3-data-abundance">#</doc-anchor-trigger>
+        <span>2. Enhancement through WEB3 Data Abundance</span>
     </h3>
 </doc-anchor-target>
-<p>Stablecoins are not necessarily stable. Stablecoins and synthetics can depeg from their target price and you can lose in value. Leech interacts with many stablecoins and synthetic representations of other assets. These assets may depend on collateral from other digital assets (DAI, sUSD, sBTC etc.) or may be bearer bonds that can only be redeemed for the underlying asset with a centralized third party (USDC, USDT, wBTC etc.). If the issuer blacklists the non-bearer asset or the synthetic asset becomes insufficiently collateralized, your positions holding or interacting with those assets may lose value or even become worthless.</p>
-<doc-anchor-target id="section-6">
+<ul>
+<li>WEB3’s <strong>transparency</strong> allows continuous refinement of statistical models and faster calibration.</li>
+<li>Detailed on-chain data (wallet activity, transaction patterns, liquidity movements) supports advanced segmentation and clustering.</li>
+</ul>
+<hr>
+<doc-anchor-target id="3-identification-of-critical-market-signals">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#section-6">#</doc-anchor-trigger>
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-primary-text bg-badge-primary border border-badge-primary-border h-8 px-3 text-sm rounded-md">
-            <span>Automated Market Maker Risks</span>
-        </span></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-identification-of-critical-market-signals">#</doc-anchor-trigger>
+        <span>3. Identification of Critical Market Signals</span>
     </h3>
 </doc-anchor-target>
-<p>Impermanent loss (or Divergence Loss) is associated with providing assets to a liquidity pool. Liquidity pools are used on decentralized exchanges, such as Uniswap or Curve, to create money markets and allow traders to buy and sell pool-supported assets. If you contribute liquidity funds to an automated market maker, you may lose some or all of the amount you invested if the relative value of assets in the automated market maker changes. If even one of the assets in the pool depreciates or becomes worthless, your entire position in the pool, regardless of the assets you originally provided when you entered the pool, may lose value or become worthless.If you provide liquidity to the pool and one of the assets increases in value relative to others in the pool, you may not make as much money as you could have if you had held those assets instead of placing them in the pool. It is critical to understand the mathematics of impermanent losses before providing liquidity. Many yield farming strategies, including the yield farming strategies used by Leech, provide incentives to provide liquidity in AMMs. These incentives do not guarantee that providing liquidity will be profitable for you.</p>
-<doc-anchor-target id="section-7">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#section-7">#</doc-anchor-trigger>
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-primary-text bg-badge-primary border border-badge-primary-border h-8 px-3 text-sm rounded-md">
-            <span>Mixed pools Mechanics</span>
-        </span></span>
-    </h3>
+<ul>
+<li>Detecting major deviations in vast datasets enables early detection of volatility events.</li>
+<li>Focusing on extremes allows for <strong>proactive risk management</strong> rather than reactive response.</li>
+</ul>
+<hr>
+<doc-anchor-target id="future-directions-">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#future-directions-">#</doc-anchor-trigger>
+        <span>Future Directions <span class="docs-emoji">&#x1F680;</span></span>
+    </h2>
 </doc-anchor-target>
-<p>All our mixed pools will consist of several pairs. For instance, we might add five medium-risk pairs to a high-risk pool. We implement this to enable liquidity reallocation among pairs on platforms like Velodrome in search of the most profitable conditions. At the moment, we have added one token pair to each mixed pool. Mixed pool (medium risk) is a liquidity mining strategy on the Optimism network, utilizing Velodrome DEX. The strategy includes farming on highly profitable stablecoin pairs such as LUSD / MAI. Mixed pool (low risk) is a liquidity mining strategy on the Optimism network, utilizing Sushiswap DEX. The strategy includes farming on low risk stablecoin pairs such as USDT / USDC.</p>
-<doc-anchor-target id="section-8">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#section-8">#</doc-anchor-trigger>
-        <span><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-primary-text bg-badge-primary border border-badge-primary-border h-8 px-3 text-sm rounded-md">
-            <span>***</span>
-        </span></span>
-    </h5>
-</doc-anchor-target>
-<p>The Leech team is not responsible for the consequences of using Leech by you from a jurisdiction that restricts or prohibits the use of cryptocurrency, tokens, DeFi protocols or smart contracts and we recommend that you stop using Leech from such jurisdiction. We also recommend to seek a professional legal advice prior to using our protocol in your place of residence.</p>
-<p>This Disclaimer can be found at <a href="https://docs.leechprotocol.com/disclaimer" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-primary-text bg-badge-primary border border-badge-primary-border hover:text-badge-primary-text-hover hover:bg-badge-primary-hover hover:border-badge-primary-border-hover transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-    <span>here</span>
-</a>. Due to constant changes and tendencies arised in the cryptocurrency market, including and especially in DeFi, that cause and create new measures to be taken and conditions for us and you when using DeFi protocols and services, and also due to the continuous development of Leech Protocol, we are forced to make modifications to this document from time to time, which you will be notified about immediately upon visiting our website with the opportunity to review and agree to the new version of the document. We also recommend you to monitor such modifications yourself and if at any point you do not agree with the new changes, we suggest that you stop using Leech.</p>
-<p>LeechProtocol L.L.C-FZ Reg.nr.: 2204042 Address: Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E.</p>
+<ul>
+<li><strong>Integration of Machine Learning Models</strong> — Neural networks and clustering for market state classification.</li>
+<li><strong>Real-Time Data Calibration</strong> — Live WEB3 data feeds for continuous model adaptation.</li>
+<li><strong>Advanced Volatility Prediction</strong> — Novel metrics to improve the accuracy of future volatility forecasts.</li>
+</ul>
+<hr>
 
                                 
                                 <!-- Required only on API pages -->
@@ -343,20 +394,20 @@ including any direct, indirect, incidental, special, exemplary, punitive or cons
                             
                                 <nav id="retype-nextprev" class="print:hidden flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../dapp_guide/how_to_deposit_withrawal/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../api/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-base-text-muted">Previous</span>
-                                                <span class="block mt-1">How to deposit/withdrawal</span>
+                                                <span class="block mt-1">API</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../lightpaper/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../features/what_is_vault/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                                <span class="block mt-1">Light paper</span>
+                                                <span class="block mt-1">What is Vault?</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -434,6 +485,6 @@ including any direct, indirect, incidental, special, exemplary, punitive or cons
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Disclaimer", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Risk Module and WEB3", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
