@@ -53,6 +53,10 @@ All our mixed pools will consist of several pairs. For instance, we might add fi
 
 The Leech team is not responsible for the consequences of using Leech by you from a jurisdiction that restricts or prohibits the use of cryptocurrency, tokens, DeFi protocols or smart contracts and we recommend that you stop using Leech from such jurisdiction. We also recommend to seek a professional legal advice prior to using our protocol in your place of residence.
 
+United Arab Emirates (UAE) / Dubai Restriction
+
+This interface is not available to persons located in the United Arab Emirates (including Dubai) and is not intended for UAE residents. By accessing or using this interface, you represent and warrant that you are not located in the UAE and that you are not a UAE resident. If you are located in the UAE or are a UAE resident, you must not access or use this interface.
+
 This Disclaimer can be found at [!badge here](https://docs.leechprotocol.com/disclaimer). Due to constant changes and tendencies arised in the cryptocurrency market, including and especially in DeFi, that cause and create new measures to be taken and conditions for us and you when using DeFi protocols and services, and also due to the continuous development of Leech Protocol, we are forced to make modifications to this document from time to time, which you will be notified about immediately upon visiting our website with the opportunity to review and agree to the new version of the document. We also recommend you to monitor such modifications yourself and if at any point you do not agree with the new changes, we suggest that you stop using Leech.
 
 LeechProtocol L.L.C-FZ Reg.nr.: 2204042 Address: Business Center 1, M Floor, The Meydan Hotel, Nad Al Sheba, Dubai, U.A.E.
