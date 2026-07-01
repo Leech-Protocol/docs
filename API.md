@@ -1,305 +1,220 @@
 ---
-label: API
+label: API Light
 order: 140
 icon: 
 ---
 
+# 📊 RM Light API
 
-Currently, the API does not implement authentication. For production or public-facing deployments, we strongly recommend integrating a secure method (e.g., API keys, JWT tokens) to control access.
+Real-time range-probability model for CEX markets.
 
-### Base URL & Environment Variables
+**Base URL**
 
-```http://164.90.156.209/api/testing```
+```
+https://rm-cex.leechprotocol.com
+```
 
-### Delta Calculation
+**Endpoint**
 
-Delta is a volatility measure used to model price uncertainty over time. It represents the average absolute percentage change in price over a given window.
+```
+POST /api/v1/probability/lite
+```
 
-### Step-by-step:
+**Headers**
 
-Step 1: For each pair of consecutive average prices P[t] and P[t+1], compute the absolute percentage change:
+```
+Content-Type: application/json
+```
 
-```delta_t = abs((P[t+1] - P[t]) / P[t])```
-
-Mathematically:
-
-```deltaₜ = |P[t+1] - P[t]| / P[t]```
-
-Step 2: Take a rolling average of delta_t over a window (default: averaging_range = steps / 2). This smooths out short-term noise:
-
-```rolling_delta = delta_series.rolling(window=averaging_range).mean()```
-
-### Endpoints
-
-### POST /calculate-single-probability
-
-### Description
-
-Calculates the probability that a given asset's price will remain within a specified range (± threshold) for a certain number of time steps, using manually provided inputs.
-
-Request
-* Methods: POST
-* URL :```/calculate-single-probability```
-
-### Request Body (JSON)
-
-| Field         | Type    | Description                                      | Example   |
-|---------------|---------|:-------------------------------------------------|----------:|
-| currentPrice  | float   | Current price of the asset.                      | 2100.25   |
-| delta         | float   | Volatility measure (absolute delta; capped at 0.05). | 0.0045    |
-| steps         | integer | Prediction horizon (in minutes).                 | 120       |
-| range         | float   | Target range threshold (e.g., 0.005 for ±0.5%).  | 0.005     |
-
-### Response
-
-### Success (HTTP 200)
+**Request example**
 
 ```json
 {
-  "probability_within_range": 0.6781,
-  "lower_bound": 2089.75,
-  "upper_bound": 2150.75,
-  "confidence_interval_80": {
-    "lower": 2092.11,
-    "upper": 2159.30
-  }
+  "mode": "cex",
+  "symbol": "ETHUSDC",
+  "range": 0.01,
+  "steps": 120,
+  "interval": "min"
 }
 ```
-* Probability_within_range: Predicted chance (in fraction) that the future price will be within the target range.
-* Lower_bound / upper_bound: The target range based on the current price and the given threshold.
-* Confidence_interval_80: 80% confidence interval computed from the underlying normal distribution.
 
-### POST /calculate-current-market-probability
+**curl**
 
-### Description
+```bash
+curl -X POST "https://rm-cex.leechprotocol.com/api/v1/probability/lite" \
+  -H "Content-Type: application/json" \
+  -d "{\"mode\":\"cex\",\"symbol\":\"ETHUSDC\",\"range\":0.01,\"steps\":120,\"interval\":\"min\"}"
+```
 
-Computes the probability using live market data. This endpoint retrieves the latest price data, calculates the volatility measure, and then invokes the prediction algorithm.
-
-### Request
-
-* Method: POST
-* URL: ```/calculate-current-market-probability```
-
-### Request Body (JSON)
-
-| Field | Type    | Description                                  | Example |
-|-------|---------|----------------------------------------------|---------|
-| steps | integer | Number of minutes ahead to run the prediction | 120     |
-| range | float   | Range threshold (e.g., 0.005 for ±0.5%)      | 0.005   |
-
-## Response
-
-The response format is identical to```/calculate-single-probability.```
-
-!!!Note: This endpoint automatically fetches live data in Uniswap ETH/USDC pool to determine the current price and volatility.
-!!!
-### POST /test-historical
-
-## Description
-
-This endpoint runs the prediction model across an entire historical dataset. In addition to returning overall metrics (e.g., average probability, accuracy, interval scores), it includes a debug section with detailed prediction data for selected timestamps.
-
-### Request
-* Method: POST
-* URL: ```/test-historical```
-
-### Request Body (JSON)
-
-| Field    | Type   | Description                                          | Example                                        |
-|----------|--------|------------------------------------------------------|------------------------------------------------|
-| dataset  | string | Name of the dataset CSV file                         | uniswap_eth_usdc_minute_2023-08-01_2024-07-31.csv |
-| steps    | int    | Prediction steps ahead (in minutes).                 | 120                                            |
-| range    | float  | Threshold for the target range (e.g., 0.005 for ±0.5%). | 0.005                                          |
-|          |        |                                                      |                                                |
-
-## Response
+**Response example**
 
 ```json
 {
-  "overall": {
-    "processed_rows": 498189,
-    "average_probability_within_range": 0.6473,
-    "naive": {
-      "total": 498189,
-      "in_wins": 323268,
-      "naive_accuracy_percentage": 64.89
-    },
-    "high_confidence": {
-      "range_in_total": 39547,
-      "range_in_wins": 30818,
-      "range_in_accuracy_percentage": 77.93,
-      "range_out_total": 50,
-      "range_out_wins": 46,
-      "range_out_accuracy_percentage": 92.00
-    }
-  },
-  "static": {
-    "total": 323268,
-    "average_probability": 66.99,
-    "naive_accuracy_percentage": 100.0,
-    "cases_prob_over_80": 30818,
-    "cases_prob_under_1": 4
-  },
-  "non_static": {
-    "total": 174921,
-    "average_probability": 60.52,
-    "naive_accuracy_percentage": 0.0,
-    "cases_prob_over_80": 8729,
-    "cases_prob_under_1": 46
-  },
-  "debug": {
-    "2023-12-28T09:55:00": {
-      "initial_price": 2392.14,
-      "future_price": 2402.47,
-      "delta": 0.00074,
-      "predicted_probability": 0.4480,
-      "predicted_range": [2380.18, 2404.10],
-      "target_range": [2380.18, 2404.10],
-      "actual_in_range": true},
-    "2024-03-25T20:27:00": {
-      "initial_price": 3635.95,
-      "future_price": 3606.98,
-      "delta": 0.00046,
-      "predicted_probability": 0.2429,
-      "predicted_range": [3642.69, 3691.88],
-      "target_range": [3617.77, 3654.13],
-      "actual_in_range": false}
-    // ... similar entries for other timestamps
-  }
+  "probability": 0.609701
 }
 ```
 
-### Explanation
+**Meaning**
 
-* Overall: Aggregated metrics for the entire dataset (naive predictions, high‑confidence predictions, etc.).
-* Static / non_static: Breakdowns based on the actual behavior:
-  * Static: Timeframes where the future price remained within the target range.
-  * Non-static: Timeframes where the future price fell outside the target range.
-* Debug: Optional. Contains detailed prediction data (e.g., for timestamps “2023-12-28T09:55:00”, “2024-03-25T20:27:00”, etc.) for advanced debugging and analysis. Debug cells setup manually in the code by request.
+`probability` = the chance that price **stays inside** the selected range.
 
-### Datasets
+| Field | Example | Reads as |
+|---|---|---|
+| `range` | `0.01` | ±1% band |
+| `steps` | `120` | 120 minutes |
+| `probability` | `0.61` | ~61% chance to stay inside ±1% over the next 120 minutes |
 
-The following historical datasets are available for testing and evaluating the prediction model. Each file contains minute-level price data for the ETH/USDC pair on Uniswap.
+**Limits**
 
-#### 1.uniswap_eth_usdc_minute_2023-08-01_2024-07-31.csv
-**Period**: August 1, 2023 → July 31, 2024 <br>
-**Chain**: Ethereum <br>
-**Download**: <a href="https://drive.google.com/file/d/1jToHNGLBvACRTSrA1LZidmCAubCNBIV4/view?usp=sharing" target="_blank">📥 Google Drive Link</a>
+| Parameter | Range |
+|---|---|
+| `steps` | 5 – 360 |
+| `range` | 0.001 – 0.05 |
+| `interval` | use `"min"` |
 
-#### 2. uniswap_eth_usdc_minute_2024-12-31_2025-04-14.csv
-**Period**: December 31, 2024 → April 14, 2025 <br>
-**Chain**: Ethereum <br>
-**Download**: <a href="https://drive.google.com/file/d/1jbf7wE79uUgyjiftNjtRMzQzYAQCKZ1f/view?usp=sharing" target="_blank">📥 Google Drive Link</a>
+<br>
 
-### Error Handling
+> 💬 **Live signals on Telegram** — see detailed, real-time RM signals in the
+> bot: **[@lpcex](https://t.me/lpcex)**
 
-If an error occurs, the API returns an HTTP 500 status with an error message in JSON format:
-```json
-{
-  "error": "Description of error."
-}
-```
+<br>
 
-Check the server logs for more details if you encounter issues.
+---
+---
 
+<br>
 
-### Examples:
+# 📈 RM Signals — Examples `[TEST]`
 
-Test 1:
-Request
+*Live illustrations of how the Range Model (RM) reads market volatility.
+Each example pairs a **Signal** (the call) with a **Check** (what actually happened).*
 
-```json
-{
-    "dataset": "uniswap_eth_usdc_minute_2024-12-31_2025-04-14.csv",
-    "steps": 240,
-    "range": 0.01
-}
-```
+<br>
 
-Response
+---
 
-```json
-{
-    "debug": {},
-    "non_static": {
-        "average_probability": 42.08178131360263,
-        "cases_prob_over_80": 8789,
-        "cases_prob_under_1": 9900,
-        "total": 61679
-    },
-    "overall": {
-        "average_probability_within_range": 0.5067226948098416,
-        "high_confidence": {
-            "range_in_accuracy_percentage": 74.21143745782108,
-            "range_in_total": 34081,
-            "range_in_wins": 25292,
-            "range_out_accuracy_percentage": 68.0225367596537,
-            "range_out_total": 14554,
-            "range_out_wins": 9900
-        },
-        "naive": {
-            "in_wins": 81552,
-            "naive_accuracy_in_range_percentage": 56.93739483770971,
-            "naive_accuracy_out_range_percentage": 43.06260516229029,
-            "total": 143231
-        },
-        "processed_rows": 143231
-    },
-    "static": {
-        "average_probability": 57.16938444660028,
-        "cases_prob_over_80": 25292,
-        "cases_prob_under_1": 4654,
-        "total": 81552
-    }
-}
-```
+## 🌊 Example 1 — Market Calm
 
-Test 2:
+<br>
 
-Request
+### 🌊 RM Signal — Market Calm
 
-```json
-{
-    "dataset": "uniswap_eth_usdc_minute_2024-12-31_2025-04-14.csv",
-    "steps": 120,
-    "range": 0.005
-}
-```
+**ETHUSDC** · `2026-06-27 06:59 UTC` · model `cal_sigma13`
 
-Response
+> The market has moved into a **quieter-than-usual** zone. The model sees a
+> somewhat higher chance that ETHUSDC stays inside its narrow ranges over the
+> next few hours — elevated, but not yet at extreme levels.
 
-```json
-{
-    "debug": {},
-    "non_static": {
-        "average_probability": 42.14056895283416,
-        "cases_prob_over_80": 304,
-        "cases_prob_under_1": 4645,
-        "total": 77410
-    },
-    "overall": {
-        "average_probability_within_range": 0.46652023281710875,
-        "high_confidence": {
-            "range_in_accuracy_percentage": 65.33637400228051,
-            "range_in_total": 877,
-            "range_in_wins": 573,
-            "range_out_accuracy_percentage": 80.40505452657088,
-            "range_out_total": 5777,
-            "range_out_wins": 4645
-        },
-        "naive": {
-            "in_wins": 66061,
-            "naive_accuracy_in_range_percentage": 46.04484529974699,
-            "naive_accuracy_out_range_percentage": 53.95515470025301,
-            "total": 143471
-        },
-        "processed_rows": 143471
-    },
-    "static": {
-        "average_probability": 51.938526356117066,
-        "cases_prob_over_80": 573,
-        "cases_prob_under_1": 1132,
-        "total": 66061
-    }
-}
-```
+**Main range**
+
+| | |
+|---|---|
+| Price now | `1579.82` |
+| Checked range | `1571.92 – 1587.72` |
+| Band / window | `±0.50%` / `120m` |
+
+**Key deviation**
+
+| Band / window | Now | 1y normal |
+|---|---|---|
+| `±0.50%` / `120m` | **26.6%** | 1.0% |
+
+**Meaning** — Volatility is on the calmer side. Range / grid / LP-style setups
+may find this context useful. RM does **not** predict direction.
+
+`Cooldown: 240m`
+
+<br>
+
+### ✅ RM Check — Calm Phase Held
+
+**ETHUSDC** · `2026-06-27 08:59 UTC` · model `cal_sigma13`
+
+**Original signal:** `DEEP_COMPRESSION / soft`
+
+| | |
+|---|---|
+| Band / window | `±0.50%` / `120m` |
+| RM no-touch estimate | 26.6% |
+| Observed | **Held** ✅ |
+| Largest move from signal price | `+0.25%` / `−0.13%` |
+| Closed at | `+0.10%` (`1581.46`) |
+
+**Outcome** — The market stayed inside the checked range. This **supports** the
+earlier calm-phase signal: realised movement was limited during the window.
+
+> 📝 **Reading it:** Staying inside a ±0.50% band over 120 minutes is normally
+> rare — about **1%** of the time on a 1-year basis. Here the model puts it at
+> **26.6%**, a sharp jump that reads as an unusually calm, low-energy market.
+
+<br>
+
+---
+---
+
+<br>
+
+## ⚡ Example 2 — Extreme Market Move
+
+<br>
+
+### ⚡ RM Signal — Extreme Market Move
+
+**ETHUSDC** · `2026-06-26 06:48 UTC` · model `cal_sigma13`
+
+> The move is **outside the 1-year historical extreme band** for at least one
+> monitored cell.
+
+**Main range**
+
+| | |
+|---|---|
+| Price now | `1567.68` |
+| Checked range | `1552.00 – 1583.36` |
+| Band / window | `±1.00%` / `120m` |
+
+**Key deviation**
+
+| Band / window | Now | 1y normal |
+|---|---|---|
+| `±1.00%` / `120m` | **9.4%** | 38.0% |
+
+**Meaning** — Range-bound conditions are deteriorating. Be careful with fresh
+range entries and review risk on existing range / grid / LP-style positions.
+RM does **not** predict direction.
+
+`Cooldown: 60m`
+
+<br>
+
+### 🎯 RM Check — Extreme Move Confirmed
+
+**ETHUSDC** · `2026-06-26 08:48 UTC` · model `cal_sigma13`
+
+**Original signal:** `MARKET_EXPANSION / extreme`
+
+| | |
+|---|---|
+| Band / window | `±1.00%` / `120m` |
+| Predicted no-touch | 9.4% |
+| Observed | **Touched** ⚡ |
+| Range broke after | `50m` |
+| Largest move from signal price | `+1.02%` / `−0.24%` |
+| Closed at | `−0.19%` (`1564.73`) |
+
+**Outcome** — Price broke out of the checked range within the horizon — the
+extreme-move prediction was **confirmed**.
+
+> 📝 **Reading it:** Holding inside a ±1.00% band over 120 minutes normally
+> happens about **38%** of the time on a 1-year basis. Here that probability
+> collapsed to just **9.4%** — the market followed through and the range
+> **broke after 50 minutes**.
+
+<br>
+
+---
+
+> ### ⚠️ Note
+> These are **illustrative examples** built on a **small set** of monitored
+> bands and time windows. Via the API you can query the full grid:
+> **time steps from 5 to 360 minutes** and **bands from ±0.5% to ±5%**.
