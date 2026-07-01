@@ -1,0 +1,24 @@
+﻿#  | Leechprotocol.com - Automated cross-chain yield aggregator
+
+- [📊 RM Light API](https://docs.leechprotocol.com/api.md): Real-time range-probability model for CEX markets.
+- [Risk Module and WEB3](https://docs.leechprotocol.com/risk_module.md): This document provides a technical demonstration of the Risk Module, designed to estimate the probability that an asset's price will remain within a specified range over a given timeframe.
+- [Disclaimer](https://docs.leechprotocol.com/disclaimer.md): The transactions you can perform using the Leech protocol (“Leech”) are superficially similar to traditional financial transactions, but in fact they are very different.
+- [Privacy Policy](https://docs.leechprotocol.com/privacypolicy.md): Last revised: March 2023
+- [Cookie Policy](https://docs.leechprotocol.com/cookiepolicy.md): Last revised: March 2023
+- [FAQ](https://docs.leechprotocol.com/faq.md): Leech Protocol provides a user-friendly solution that simplifies the yield farming process across all major blockchains and platforms, enabling users to efficiently earn crypto in just a few clicks.
+- [Links](https://docs.leechprotocol.com/links.md): Contracts & Audit
+
+## Introduction
+
+- [What Is Leech Protocol?](https://docs.leechprotocol.com/introduction/what_is_leech_protocol.md): Leech Protocol is one of the first automatic DeFi cross-chain yield aggregators to earn optimal profits on different blockchains.
+- [What makes Leech Protocol unique?](https://docs.leechprotocol.com/introduction/what_makes_leech_protocol_unique.md): Leech Protocol allows users to provide liquidity from any blockchain and get returns effortlessly. The protocol performs all the operations that the users will usually have to execute manually and determines a good Annual Percentage Yield (APY).
+
+## Features
+
+- [What is Vault?](https://docs.leechprotocol.com/features/what_is_vault.md): Vaults are specialized investment tools designed for yield farming, utilizing automated processes to consistently allocate and reinvest deposited funds. This approach enables the accumulation of substantial compound interest over time.
+- [How It Works?](https://docs.leechprotocol.com/features/how_it_works.md): LeechProtocol offers users multiple pools to deposit assets to. Users deposit their assets directly into a smart contract that manages user deposits and withdrawals into the offered vaults.
+- [Smart Contract](https://docs.leechprotocol.com/features/smart_contract.md): The smart contract is responsible for the implementation of the Yield aggregation strategy and its interaction with DeFi platforms according to the Strategy.
+- [Сomposite vault (Mixpool and Risk graded)](https://docs.leechprotocol.com/features/composite_vaults.md): Leech constantly searches for the most profitable strategies Our flagship feature is automatic complex multi-level strategies that our team develops and regularly updates.
+- [Separate vaults](https://docs.leechprotocol.com/features/separate_vaults.md): Leech Protocol allows users to easily farm on multiple chains. They deposit their liquidity into the Leech Protocol, which then performs operations that the user would normally do manually.
+- [Cross-chain](https://docs.leechprotocol.com/features/cross-chain.md): Leech Protocol is one of the first DeFi 2.0 automatic cross-chain yield aggregators that ensures safe farming of any cryptocurrency with effective risk management for the users.
+- [Leech Hedging strategy (coming soon)](https://docs.leechprotocol.com/features/leech_hedging_strategy.md): The main advantage of this strategy is that it creates a regular income from an asset chosen by the user, while it lessens the chance of losing the value of the chosen asset due to rebalancing and hedging mechanics.
